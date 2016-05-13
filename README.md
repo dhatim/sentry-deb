@@ -16,16 +16,16 @@ From the *same OS version* as your target, do:
     $ cd ..
     $ ls -1
     README.md
-    sentry_8.3.2-1.dsc
-    sentry_8.3.2-1.tar.gz
-    sentry_8.3.2-1_amd64.changes
-    sentry_8.3.2-1_amd64.deb
+    sentry_8.4.0-1.dsc
+    sentry_8.4.0-1.tar.gz
+    sentry_8.4.0-1_amd64.changes
+    sentry_8.4.0-1_amd64.deb
 
 ## some more details
 
 ### sentry
 
-The target sentry version is 8.3.2. postinst calls `sentry init
+The target sentry version is 8.4.0. postinst calls `sentry init
 /etc/sentry/sentry.conf.py` if this file doesn't exist already, so as
 to provide a sample configuration file.
 
