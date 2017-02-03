@@ -16,10 +16,10 @@ From the *same OS version* as your target, do:
     $ cd ..
     $ ls -1
     README.md
-    sentry_8.12.0-1.dsc
-    sentry_8.12.0-1.tar.gz
-    sentry_8.12.0-1_amd64.changes
-    sentry_8.12.0-1_amd64.deb
+    sentry_8.13.0-1.dsc
+    sentry_8.13.0-1.tar.gz
+    sentry_8.13.0-1_amd64.changes
+    sentry_8.13.0-1_amd64.deb
 
 ## some more details
 
