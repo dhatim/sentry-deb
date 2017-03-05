@@ -1,0 +1,12 @@
+language: java
+jdk: oraclejdk8
+install: true
+script: . .travis/script.sh
+sudo: required
+services:
+  - docker
+env:
+  global:
+  - BINTRAY_NAME="ochedru"
+  #BINTRAY_KEY
+  - secure: "1hS8atgeFP0at3ujQdSJDd7jLNJxv0HvekUh2OrlRiHwh1FKdQ1tEaRM96kDNKx8oZGkj7sKNYnR0ePYC6aZKFMbjoZ8gxSD6bOGP/5xsCBxxd9ulg/eZnrHOLpj6bMixv8CB6TYW6GPSSx/j+NH/ISKfOTeBEotbhW8Ttg61Jy379za7j7Hp2ZaQugerTh8JDbC6o42k/6zy/KVBIEoJDdB3rk6P1cGz2YYA/UIPHLS6PBFqVT4qouiVK2c9TSS2+GsQP7JC/KiGvbGJg1BNFAhhMQQ8FRStAnJPrK+7ph78stXlOE15qeiAORjJcmS5+zkEt7NUj1IDqrSjHLUva4EiFZgL1cfhieonB5gxGBzk0lWtYEirqFNdVbPvfg6QvFToP2TJLpiOTURmLz1822hTdRhQMnI5tKAdFeAgLvmvkMcsaXKS0PU0JE9Qg9tAfe1mnrFcPUHzZIXi/FWFAlmPZZL9aOpE1UXXNYtd1NJEDrmxOox4HviHw6lSDg3mSdj89jLhwdn2EUbEfbs3hmiMbbUYLSH4VwFucc7PYfiK34gTf7b2Z7qIGtdeIlFJrU5fxy3MjWGbRI1tTmkGHtuER2XO1HWv+RteZxRy4PJKe177xZ2gB+2r+dNnRexT5rZ4loBo0ePcBu3AGKP3YMdv28OgtahrT7kzrFA5Pg="

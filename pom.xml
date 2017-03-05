@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <artifactId>root-oss</artifactId>
+        <groupId>org.dhatim</groupId>
+        <version>3.0.0</version>
+    </parent>
+
+    <groupId>org.dhatim</groupId>
+    <artifactId>sentry-deb</artifactId>
+    <version>0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <prerequisites>
+        <maven>3.3.3</maven>
+    </prerequisites>
+
+    <scm>
+        <connection>scm:git:git@github.com:dhatim/sentry-deb.git</connection>
+        <tag>HEAD</tag>
+    </scm>
+    
+    <properties>
+        <docker.container.timeout>600000</docker.container.timeout>
+        <dockertag>latest</dockertag>
+    </properties>
+
+    <build>
+        <extensions>
+            <extension>
+                <groupId>org.vafer</groupId>
+                <artifactId>jdeb</artifactId>
+            </extension>
+        </extensions>
+        <plugins>
+            <plugin>
+                <groupId>io.fabric8</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <configuration>
+                    <follow>true</follow>
+                    <images>
+                        <image>
+                            <name>docker.dhatim.it/sentry-build:%l</name>
+                            <alias>sentry-build:${dockertag}</alias>
+                            <build>
+                                <tags>
+                                    <tag>${dockertag}</tag>
+                                </tags>
+                                <from>debian:8</from>
+                                <assembly>
+                                    <basedir>/wd</basedir>
+                                    <descriptor>sentry-build.xml</descriptor>
+                                </assembly>
+                                <workdir>/wd</workdir>
+                                <runCmds>
+                                    <run><![CDATA[set -ex]]></run>
+                                    <run><![CDATA[chmod 755 /wd /wd/build.sh]]></run>
+                                    <!-- need some packages from backports -->
+                                    <run><![CDATA[echo "deb http://deb.debian.org/debian jessie-backports main" >> /etc/apt/sources.list]]></run>
+                                    <run><![CDATA[cd /wd]]></run>
+                                    <run><![CDATA[mv backports_preferences /etc/apt/preferences.d]]></run>
+                                    <run><![CDATA[apt-get update]]></run>
+                                    <run><![CDATA[apt-get install --assume-yes python curl]]></run>
+                                    <run><![CDATA[curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py]]></run>
+                                    <run><![CDATA[python get-pip.py]]></run>
+                                    <run><![CDATA[rm get-pip.py]]></run>
+                                    <run><![CDATA[apt-get install --assume-yes --no-install-recommends python-dev dh-virtualenv clang cmake libxml2-dev libxslt-dev libpq-dev libffi-dev libjpeg62-turbo-dev zlib1g-dev libssl-dev build-essential devscripts equivs git sudo]]></run>
+                                    <!-- install build dependencies for sentry-deb -->
+                                    <run><![CDATA[mk-build-deps --install --tool "apt-get --assume-yes --no-install-recommends"]]></run>
+                                    <!-- rust compiler is required for libsourcemap -->
+                                    <run><![CDATA[curl -sf https://static.rust-lang.org/rustup.sh | sh]]></run>
+                                </runCmds>
+                                <optimise>true</optimise>
+                                <cmd>/wd/build.sh</cmd>
+                            </build>
+                            <run>
+                                <volumes>
+                                    <bind>
+                                        <volume>${project.build.directory}:/target</volume>
+                                    </bind>
+                                </volumes>
+                                <wait>
+                                    <time>${docker.container.timeout}</time>
+                                    <log>build complete</log>
+                                </wait>
+                            </run>
+                        </image>
+                    </images>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>build</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>build-nofork</goal>
+                            <goal>start</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
