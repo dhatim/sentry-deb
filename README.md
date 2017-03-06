@@ -1,5 +1,7 @@
 # sentry-deb
 
+[![Build Status](https://travis-ci.org/dhatim/sentry-deb.svg?branch=master)](https://travis-ci.org/dhatim/sentry-deb)
+
 The goal of this project is to package [sentry](https://getsentry.com)
 for [debian](https://www.debian.org). It leverages
 [dh-virtualenv](https://github.com/spotify/dh-virtualenv) to perform
