@@ -14,7 +14,7 @@
     <groupId>org.dhatim</groupId>
     <artifactId>sentry-deb</artifactId>
     <version>0-SNAPSHOT</version>
-    <packaging>pom</packaging>
+    <packaging>deb</packaging>
 
     <prerequisites>
         <maven>3.3.3</maven>
@@ -100,6 +100,17 @@
                             <goal>build-nofork</goal>
                             <goal>start</goal>
                         </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <artifactId>jdeb</artifactId>
+                <groupId>org.vafer</groupId>
+                <executions>
+                    <!-- Disable default execution from parent POM -->
+                    <execution>
+                        <id>default-jdeb</id>
+                        <phase/>
                     </execution>
                 </executions>
             </plugin>
