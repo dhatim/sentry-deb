@@ -6,26 +6,28 @@ for [debian](https://www.debian.org). It leverages
 the actual work. The primary OS target is debian 8 "jessie"; It might
 or might not work on other debian and debian based systems.
 
-## Usage
+## Installation
 
-From the *same OS version* as your target, do:
+- Add Dhatim Bintray's debian repository in sources.list:
+  ```bash
+  echo "deb http://dl.bintray.com/dhatim/deb stable main" | sudo tee -a /etc/apt/sources.list
+  ```
 
-    $ git clone git@github.com:dhatim/sentry-deb.git
-    $ cd sentry-deb/pkg
-    $ dpkg-buildpackage -us -uc
-    $ cd ..
-    $ ls -1
-    README.md
-    sentry_8.14.0-1.dsc
-    sentry_8.14.0-1.tar.gz
-    sentry_8.14.0-1_amd64.changes
-    sentry_8.14.0-1_amd64.deb
+- If it is the first repository from Bintray that you add, you will also need to add Bintray's public key to apt:
+  ```bash
+  sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 379CE192D401AB61
+  ```
+
+- Install the `sentry` package:
+  ```bash
+  sudo apt-get update && sudo apt-get install sentry
+  ```
 
 ## some more details
 
 ### sentry
 
-The target sentry version is 8.10.0. postinst calls `sentry init
+The target sentry version is 8.14.0. postinst calls `sentry init
 /etc/sentry/sentry.conf.py` if this file doesn't exist already, so as
 to provide a sample configuration file.
 
