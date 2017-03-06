@@ -26,7 +26,7 @@
     </scm>
     
     <properties>
-        <docker.container.timeout>600000</docker.container.timeout>
+        <docker.container.timeout>3600000</docker.container.timeout>
         <dockertag>latest</dockertag>
     </properties>
 
@@ -69,7 +69,7 @@
                                     <run><![CDATA[curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py]]></run>
                                     <run><![CDATA[python get-pip.py]]></run>
                                     <run><![CDATA[rm get-pip.py]]></run>
-                                    <run><![CDATA[apt-get install --assume-yes --no-install-recommends python-dev dh-virtualenv clang cmake libxml2-dev libxslt-dev libpq-dev libffi-dev libjpeg62-turbo-dev zlib1g-dev libssl-dev build-essential devscripts equivs git sudo]]></run>
+                                    <run><![CDATA[apt-get install --assume-yes --no-install-recommends python-dev dh-virtualenv gcc-multilib clang cmake libxml2-dev libxslt-dev libpq-dev libffi-dev libjpeg62-turbo-dev zlib1g-dev libssl-dev build-essential devscripts equivs git sudo]]></run>
                                     <!-- install build dependencies for sentry-deb -->
                                     <run><![CDATA[mk-build-deps --install --tool "apt-get --assume-yes --no-install-recommends"]]></run>
                                     <!-- rust compiler is required for libsourcemap -->
