@@ -4,7 +4,7 @@
     <fileSets>
         <fileSet>
             <directory>${project.basedir}/src/main/docker/sentry-build</directory>
-            <outputDirectory>.</outputDirectory>
+            <outputDirectory>pkg</outputDirectory>
         </fileSet>
     </fileSets>
 </assembly>

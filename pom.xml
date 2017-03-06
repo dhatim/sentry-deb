@@ -59,24 +59,24 @@
                                 <workdir>/wd</workdir>
                                 <runCmds>
                                     <run><![CDATA[set -ex]]></run>
-                                    <run><![CDATA[chmod 755 /wd /wd/build.sh]]></run>
+                                    <run><![CDATA[chmod 755 /wd /wd/pkg/build.sh]]></run>
                                     <!-- need some packages from backports -->
                                     <run><![CDATA[echo "deb http://deb.debian.org/debian jessie-backports main" >> /etc/apt/sources.list]]></run>
-                                    <run><![CDATA[cd /wd]]></run>
-                                    <run><![CDATA[mv backports_preferences /etc/apt/preferences.d]]></run>
+                                    <run><![CDATA[mv /wd/pkg/backports_preferences /etc/apt/preferences.d]]></run>
                                     <run><![CDATA[apt-get update]]></run>
                                     <run><![CDATA[apt-get install --assume-yes python curl]]></run>
-                                    <run><![CDATA[curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py]]></run>
-                                    <run><![CDATA[python get-pip.py]]></run>
-                                    <run><![CDATA[rm get-pip.py]]></run>
+                                    <run><![CDATA[curl https://bootstrap.pypa.io/get-pip.py -o /tmp/get-pip.py]]></run>
+                                    <run><![CDATA[python /tmp/get-pip.py]]></run>
+                                    <run><![CDATA[rm /tmp/get-pip.py]]></run>
                                     <run><![CDATA[apt-get install --assume-yes --no-install-recommends python-dev dh-virtualenv gcc-multilib clang cmake libxml2-dev libxslt-dev libpq-dev libffi-dev libjpeg62-turbo-dev zlib1g-dev libssl-dev build-essential devscripts equivs git sudo]]></run>
                                     <!-- install build dependencies for sentry-deb -->
+                                    <run><![CDATA[cd /wd/pkg]]></run>
                                     <run><![CDATA[mk-build-deps --install --tool "apt-get --assume-yes --no-install-recommends"]]></run>
                                     <!-- rust compiler is required for libsourcemap -->
                                     <run><![CDATA[curl -sf https://static.rust-lang.org/rustup.sh | sh]]></run>
                                 </runCmds>
                                 <optimise>true</optimise>
-                                <cmd>/wd/build.sh</cmd>
+                                <cmd>/wd/pkg/build.sh</cmd>
                             </build>
                             <run>
                                 <volumes>

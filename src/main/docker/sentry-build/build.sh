@@ -1,15 +1,7 @@
 #!/bin/sh -ex
 
-# build libsourcemap
-#cd /wd
-#git clone https://github.com/getsentry/libsourcemap
-#cd libsourcemap
-#git checkout tags/0.5.0
-#pip install --upgrade pip cffi
-#make develop
-
-# build sentry-deb
-cd /wd
+cd /wd/pkg
 dpkg-buildpackage -us -uc
+cp /wd/*.deb /target
 
 echo 'build complete'
