@@ -9,7 +9,7 @@ setup(
     name='sentry',
     version='8.14.0',
     author='Dhatim',
-    author_email='oss@dhatim.com',
+    author_email='dev-oss@dhatim.com',
     packages=[],
     license='BSD',
     description='Sentry',
