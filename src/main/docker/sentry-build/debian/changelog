@@ -1,125 +1,131 @@
+sentry (8.14.1-3) dhatim; urgency=medium
+
+  *  fix requirements
+
+ --   Dhatim <dev-oss@dhatim.com>  Fri, 10 Mar 2017 11:58:00 +0200
+ 
 sentry (8.14.1-2) dhatim; urgency=medium
 
   *  fix sentry init
 
- --   Dhatim <contact@dhatim.net>  Thu, 09 Mar 2017 16:56:00 +0200
+ --   Dhatim <dev-oss@dhatim.com>  Thu, 09 Mar 2017 16:56:00 +0200
 
 sentry (8.14.1-1) dhatim; urgency=medium
 
   *  bump version
 
- --   Dhatim <contact@dhatim.net>  Tue, 07 Mar 2017 09:01:00 +0200
+ --   Dhatim <dev-oss@dhatim.com>  Tue, 07 Mar 2017 09:01:00 +0200
 
 sentry (8.14.0-1) dhatim; urgency=medium
 
   *  bump version
 
- --   Dhatim <contact@dhatim.net>  Thu, 03 Mar 2017 18:47:00 +0200
+ --   Dhatim <dev-oss@dhatim.com>  Thu, 03 Mar 2017 18:47:00 +0200
 
 sentry (8.13.0-1) dhatim; urgency=medium
 
   *  bump version
 
- --   Dhatim <contact@dhatim.net>  Thu, 02 Feb 2017 10:59:00 +0200
+ --   Dhatim <dev-oss@dhatim.com>  Thu, 02 Feb 2017 10:59:00 +0200
 
 sentry (8.12.0-1) dhatim; urgency=medium
 
   *  bump version
 
- --   Dhatim <contact@dhatim.net>  Wed, 18 Jan 2017 12:28:00 +0200
+ --   Dhatim <dev-oss@dhatim.com>  Wed, 18 Jan 2017 12:28:00 +0200
 
 sentry (8.11.0-1) dhatim; urgency=medium
 
   *  bump version, fix service definitions
 
- --   Dhatim <contact@dhatim.net>  Thu, 02 Dec 2016 21:52:00 +0200
+ --   Dhatim <dev-oss@dhatim.com>  Thu, 02 Dec 2016 21:52:00 +0200
 
 sentry (8.10.0-2) dhatim; urgency=medium
 
   *  fix installation path in packaging
 
- --   Dhatim <contact@dhatim.net>  Thu, 02 Dec 2016 21:52:00 +0200
+ --   Dhatim <dev-oss@dhatim.com>  Thu, 02 Dec 2016 21:52:00 +0200
 
 sentry (8.10.0-1) dhatim; urgency=medium
 
   *  bump version
 
- --   Dhatim <contact@dhatim.net>  Sun, 06 Nov 2016 15:47:00 +0200
+ --   Dhatim <dev-oss@dhatim.com>  Sun, 06 Nov 2016 15:47:00 +0200
 
 sentry (8.9.0-2) dhatim; urgency=medium
 
   *  integrate sentry-slack
 
- --   Dhatim <contact@dhatim.net>  Tue, 18 Oct 2016 10:48:00 +0200
+ --   Dhatim <dev-oss@dhatim.com>  Tue, 18 Oct 2016 10:48:00 +0200
 
 sentry (8.9.0-1) dhatim; urgency=medium
 
   *  bump version
 
- --   Dhatim <contact@dhatim.net>  Thu, 06 Oct 2016 16:24:00 +0200
+ --   Dhatim <dev-oss@dhatim.com>  Thu, 06 Oct 2016 16:24:00 +0200
 
 sentry (8.8.0-1) dhatim; urgency=medium
 
   *  bump version
 
- --   Dhatim <contact@dhatim.net>  Tue, 13 Sep 2016 09:02:00 +0200
+ --   Dhatim <dev-oss@dhatim.com>  Tue, 13 Sep 2016 09:02:00 +0200
 
 sentry (8.7.0-1) dhatim; urgency=medium
 
   *  bump version
 
- --   Dhatim <contact@dhatim.net>  Wed, 17 Aug 2016 13:54:00 +0200
+ --   Dhatim <dev-oss@dhatim.com>  Wed, 17 Aug 2016 13:54:00 +0200
  
 sentry (8.6.0-1) dhatim; urgency=medium
 
   *  bump version
 
- --   Dhatim <contact@dhatim.net>  Tue, 05 Jul 2016 12:11:00 +0200
+ --   Dhatim <dev-oss@dhatim.com>  Tue, 05 Jul 2016 12:11:00 +0200
  
 sentry (8.5.1-1) dhatim; urgency=medium
 
   *  bump version
 
- --   Dhatim <contact@dhatim.net>  Wed, 08 Jun 2016 22:21:00 +0200
+ --   Dhatim <dev-oss@dhatim.com>  Wed, 08 Jun 2016 22:21:00 +0200
  
 sentry (8.4.0-2) dhatim; urgency=medium
 
   * increase revision
 
- --   Dhatim <contact@dhatim.net>  Mon, 16 May 2016 15:52:00 +0200
+ --   Dhatim <dev-oss@dhatim.com>  Mon, 16 May 2016 15:52:00 +0200
  
 sentry (8.4.0-1) dhatim; urgency=medium
 
   * bump version
 
- --   Dhatim <contact@dhatim.net>  Tue, 13 May 2016 17:35:40 +0200
+ --   Dhatim <dev-oss@dhatim.com>  Tue, 13 May 2016 17:35:40 +0200
  
 sentry (8.3.2-1) dhatim; urgency=medium
 
   * bump version
 
- --   Dhatim <contact@dhatim.net>  Tue, 12 Apr 2016 09:27:11 +0200
+ --   Dhatim <dev-oss@dhatim.com>  Tue, 12 Apr 2016 09:27:11 +0200
  
 sentry (8.2.3-1) dhatim; urgency=medium
 
   * bump version
 
- --   Dhatim <contact@dhatim.net>  Thu, 24 Mar 2016 15:32:36 +0200
+ --   Dhatim <dev-oss@dhatim.com>  Thu, 24 Mar 2016 15:32:36 +0200
 
 sentry (7.7.0-1) dhatim; urgency=medium
 
   * bump version
 
- --   Dhatim <contact@dhatim.net>  Thu, 01 Oct 2015 15:00:32 +0200
+ --   Dhatim <dev-oss@dhatim.com>  Thu, 01 Oct 2015 15:00:32 +0200
 
 sentry (7.7.0-0) dhatim; urgency=medium
 
   * fix postinst
 
- --   Dhatim <contact@dhatim.net>  Thu, 01 Oct 2015 12:23:07 +0200
+ --   Dhatim <dev-oss@dhatim.com>  Thu, 01 Oct 2015 12:23:07 +0200
 
 sentry (7.7.0) dhatim; urgency=low
 
   * https://github.com/getsentry/sentry/releases/tag/7.7.0
 
- --  Dhatim <contact@dhatim.net>  Tue, 29 Sep 2015 17:27:19 +0200
+ --  Dhatim <dev-oss@dhatim.com>  Tue, 29 Sep 2015 17:27:19 +0200
