@@ -61,12 +61,16 @@ $ sudo supervisorctl stop sentry-web
 sentry-web: stopped
 $ sudo supervisorctl stop sentry-worker
 sentry-worker: stopped
+$ sudo supervisorctl stop sentry-cron
+sentry-cron: stopped
 $ sudo apt-get update
 $ sudo apt-get install sentry
 $ sudo /usr/share/python/sentry/bin/sentry --config /etc/sentry/sentry.conf.py upgrade
 ...
-$ sudo supervisorctl start sentry-worker
-sentry-worker: started
 $ sudo supervisorctl start sentry-web
 sentry-web: started
+$ sudo supervisorctl start sentry-worker
+sentry-worker: started
+$ sudo supervisorctl start sentry-wcron
+sentry-cron: started
 ```
