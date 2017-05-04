@@ -30,7 +30,7 @@ or might not work on other debian and debian based systems.
 
 ### sentry
 
-The target sentry version is 8.15.0. postinst calls `sentry init
+The target sentry version is 8.16.0. postinst calls `sentry init
 /etc/sentry/sentry.conf.py` if this file doesn't exist already, so as
 to provide a sample configuration file.
 
@@ -61,12 +61,16 @@ $ sudo supervisorctl stop sentry-web
 sentry-web: stopped
 $ sudo supervisorctl stop sentry-worker
 sentry-worker: stopped
+$ sudo supervisorctl stop sentry-cron
+sentry-cron: stopped
 $ sudo apt-get update
 $ sudo apt-get install sentry
 $ sudo /usr/share/python/sentry/bin/sentry --config /etc/sentry/sentry.conf.py upgrade
 ...
-$ sudo supervisorctl start sentry-worker
-sentry-worker: started
 $ sudo supervisorctl start sentry-web
 sentry-web: started
+$ sudo supervisorctl start sentry-worker
+sentry-worker: started
+$ sudo supervisorctl start sentry-wcron
+sentry-cron: started
 ```
