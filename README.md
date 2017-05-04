@@ -71,6 +71,6 @@ $ sudo supervisorctl start sentry-web
 sentry-web: started
 $ sudo supervisorctl start sentry-worker
 sentry-worker: started
-$ sudo supervisorctl start sentry-wcron
+$ sudo supervisorctl start sentry-cron
 sentry-cron: started
 ```
