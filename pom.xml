@@ -112,7 +112,7 @@
                         <configuration>
                             <artifacts>
                                 <artifact>
-                                    <file>${project.build.directory}/sentry_8.15.0-1_amd64.deb</file>
+                                    <file>${project.build.directory}/sentry_8.16.0-1_amd64.deb</file>
                                     <type>deb</type>
                                     <classifier>deb</classifier>
                                 </artifact>
