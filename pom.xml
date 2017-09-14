@@ -8,7 +8,7 @@
     <parent>
         <artifactId>root-oss</artifactId>
         <groupId>org.dhatim</groupId>
-        <version>3.0.0</version>
+        <version>5.10.2</version>
     </parent>
 
     <groupId>org.dhatim</groupId>
@@ -51,7 +51,7 @@
                                 <tags>
                                     <tag>${dockertag}</tag>
                                 </tags>
-                                <from>debian:8</from>
+                                <from>debian:9</from>
                                 <assembly>
                                     <basedir>/wd</basedir>
                                     <descriptor>sentry-build.xml</descriptor>
@@ -82,7 +82,7 @@
                         <id>build</id>
                         <phase>package</phase>
                         <goals>
-                            <goal>build-nofork</goal>
+                            <goal>build</goal>
                             <goal>start</goal>
                         </goals>
                     </execution>

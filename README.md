@@ -6,7 +6,7 @@
 The goal of this project is to package [sentry](https://getsentry.com)
 for [debian](https://www.debian.org). It leverages
 [dh-virtualenv](https://github.com/spotify/dh-virtualenv) to perform
-the actual work. The primary OS target is debian 8 "jessie"; It might
+the actual work. The primary OS target is debian 9 "stretch"; It might
 or might not work on other debian and debian based systems.
 
 ## Installation
