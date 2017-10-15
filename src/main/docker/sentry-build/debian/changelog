@@ -1,4 +1,10 @@
-sentry (8.20.0-2) dhatim; urgency=medium
+sentry (8.21.0-2) dhatim; urgency=medium
+
+  *  bump version
+
+ --   Dhatim <dev-oss@dhatim.com>  Sun, 15 Oct 2017 22:28:00 +0200
+
+ sentry (8.20.0-2) dhatim; urgency=medium
 
   *  build for debian stretch
 
