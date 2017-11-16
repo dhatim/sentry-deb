@@ -30,7 +30,7 @@ or might not work on other debian and debian based systems.
 
 ### sentry
 
-The target sentry version is 8.21.0. postinst calls `sentry init
+The target sentry version is 8.22.0. postinst calls `sentry init
 /etc/sentry/sentry.conf.py` if this file doesn't exist already, so as
 to provide a sample configuration file.
 
