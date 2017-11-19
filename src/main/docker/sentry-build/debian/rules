@@ -2,8 +2,10 @@
 
 export DH_VIRTUALENV_INSTALL_ROOT=/usr/share/python
 
-override_dh_strip:
-	dh_strip --exclude=cffi --exclude=lxml --exclude=psycopg2
+# workaround for
+# error: cannot find library libz-a147dcb0.so.1.2.3 needed by debian/sentry/usr/share/python/sentry/lib/python2.7/site-packages/PIL/.libs/libpng16-4b619e46.so.16.25.0 (ELF format: 'elf64-x86-64' abi: '0201003e00000000'; RPATH: '')
+export LD_LIBRARY_PATH=/wd/pkg/debian/sentry/usr/share/python/sentry/lib/python2.7/site-packages/PIL/.libs/
 
 %:
 	dh $@ --with python-virtualenv
+
