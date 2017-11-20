@@ -8,7 +8,7 @@
     <parent>
         <artifactId>root-oss</artifactId>
         <groupId>org.dhatim</groupId>
-        <version>5.10.2</version>
+        <version>8.0.0</version>
     </parent>
 
     <groupId>org.dhatim</groupId>
@@ -51,7 +51,7 @@
                                 <tags>
                                     <tag>${dockertag}</tag>
                                 </tags>
-                                <from>debian:9</from>
+                                <from>debian:9.2</from>
                                 <assembly>
                                     <basedir>/wd</basedir>
                                     <descriptor>sentry-build.xml</descriptor>
@@ -112,7 +112,7 @@
                         <configuration>
                             <artifacts>
                                 <artifact>
-                                    <file>${project.build.directory}/sentry_8.21.0-2_amd64.deb</file>
+                                    <file>${project.build.directory}/sentry_8.22.0-1_amd64.deb</file>
                                     <type>deb</type>
                                     <classifier>deb</classifier>
                                 </artifact>
